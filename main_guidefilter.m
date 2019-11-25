@@ -23,7 +23,6 @@ t = 1 - get_underwater_dark_channel(image ./ Atom, win_size);
 trans_est = guidedfilter(double(rgb2gray(image)), t, r, eps);
 
 figure('name', 't'), imshow(trans_est);
-figure('name', 't_color'), imshow(t_color);
 
 max_trans_est = repmat(max(trans_est, 0.1), [1, 1, 3]);
 
